@@ -68,7 +68,7 @@ cy.get('[type="checkbox"]').should('be.checked');
 
 Examples for expect():
 
-expect(name).to.equal('John');
+expect(name).to.equal('Mary');
 expect(response.status).to.eq(200);
 expect(array).to.have.lengthOf(3);
 
@@ -82,7 +82,7 @@ cy.visit()
 cy.visit('/dashboard')
 Type into a textbox
 cy.type()
-cy.get('#email').type('user@test.com')
+cy.get('#email').type('mary@gmail.com')
 Click a button
 cy.click()
 cy.get('.btn-submit').click()
@@ -179,10 +179,10 @@ Buttons
 cy.get('.save-btn').click();
 
 Text fields
-cy.get('#first-name').type('Jane');
+cy.get('#first-name').type('Mary');
 
 Password fields
-cy.get('[type="password"]').type('Secret123!');
+cy.get('[type="password"]').type('Mary@2345!');
 
 Checkboxes
 cy.get('#newsletter').check().should('be.checked');
@@ -355,5 +355,5 @@ Research:
 Why Cypress cannot upload files by default: Historically, standard HTML file input structures rely on direct native OS file picker interfaces which JavaScript sandboxes cannot control.
 The solution: Modern Cypress uses the built-in .selectFile() command directly on input elements, or tests rely on the cypress-file-upload plugin.
  Example:
-cy.get('input[type="file"]').selectFile('cypress/fixtures/sample-image.jpg'
+cy.get('input[type="file"]').selectFile('cypress/fixtures/sample-image.jpg')
 
